@@ -65,12 +65,23 @@ export const sample_foods = [
       imageUrl: 'food-6.jpg',
       tags: ['FastFood', 'Pizza', 'Lunch'],
     },
+    {
+      id: '7',
+      name: 'Maggie',
+      price: 20,
+      cookTime: '15-20',
+      favourite: true,
+      origins: ['italy', 'india'],
+      stars: 4.5,
+      imageUrl: 'food-7.jpg',
+      tags: ['FastFood'],
+    },
   ];
 
 
 export const sample_tags = [
-    { name: 'All', count: 6 },
-    { name: 'FastFood', count: 4 },
+    { name: 'All', count: 7 },
+    { name: 'FastFood', count: 5 },
     { name: 'Pizza', count: 2 },
     { name: 'Lunch', count: 3 },
     { name: 'SlowFood', count: 2 },
