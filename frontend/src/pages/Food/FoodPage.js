@@ -7,6 +7,7 @@ import Tags from '../../components/Tags/Tags';
 import { getById } from '../../services/foodService';
 import classes from './foodPage.module.css';
 import { useCart } from '../../hooks/useCart';
+import NotFound from '../../components/NotFound/NotFound';
 export default function FoodPage() {
   const [food, setFood] = useState({});
   const { id } = useParams();
@@ -23,7 +24,9 @@ export default function FoodPage() {
   }, [id]);
   return (
     <>
-      {food && (
+      {!food? (
+        <NotFound message="Food Not Found!" linkText="Back To HomePage"/>
+      ) : (
         <div className={classes.container}>
           <img
             className={classes.image}
