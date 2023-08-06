@@ -69,6 +69,7 @@ export const sample_foods = [
       imageUrl: 'food-7.jpg',
       tags: ['FastFood'],
     },
+    
   ];
 
 
