@@ -11,6 +11,6 @@ export default function Price({ price, locale, currency }) {
 }
 
 Price.defaultProps = {
-  locale: 'en-IN',
-  currency: 'INR',
+  locale: 'en-US',
+  currency: 'USD',
 };

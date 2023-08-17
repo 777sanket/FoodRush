@@ -45,7 +45,7 @@ router.post(
       password: hashedPassword,
       address,
     }
-
+    //Posting the data to database
     const result = await UserModel.create(newUser);
     res.send(generateTokenResponse(result));
   })

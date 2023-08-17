@@ -19,12 +19,19 @@ export default function AppRoutes() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/payment" element={<PaymentPage />} />
         <Route 
           path="/checkout" 
           element={
             <AuthRoute>
               <CheckoutPage />
+            </AuthRoute>
+          } 
+        />
+        <Route 
+          path="/payment" 
+          element={
+            <AuthRoute>
+              <PaymentPage />
             </AuthRoute>
           } 
         />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useCart } from '../../hooks/useCart';
 import { useAuth } from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
@@ -12,8 +12,6 @@ import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import OrderItemsList from '../../components/OrderItemsList/OrderItemsList';
 import Map from '../../components/Map/Map';
-
-
 export default function CheckoutPage() {
   const { cart } = useCart();
   const { user } = useAuth();
@@ -34,7 +32,6 @@ export default function CheckoutPage() {
 
     await createOrder({ ...order, name: data.name, address: data.address });
     navigate('/payment');
-
   };
 
   return (
@@ -49,7 +46,7 @@ export default function CheckoutPage() {
               {...register('name')}
               error={errors.name}
             />
-            <Input 
+            <Input
               defaultValue={user.address}
               label="Address"
               {...register('address')}
@@ -57,7 +54,6 @@ export default function CheckoutPage() {
             />
           </div>
           <OrderItemsList order={order} />
-
         </div>
         <div>
           <Title title="Choose Your Location" fontSize="1.6rem" />
@@ -71,7 +67,7 @@ export default function CheckoutPage() {
         </div>
 
         <div className={classes.buttons_container}>
-          <div className={classes.buttons}> 
+          <div className={classes.buttons}>
             <Button
               type="submit"
               text="Go To Payment"
