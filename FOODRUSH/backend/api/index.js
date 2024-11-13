@@ -19,6 +19,7 @@ app.use(
     credentials: true,
     // origin: ["http://localhost:3000"],
     origin: ["https://food-rush-frontend.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
