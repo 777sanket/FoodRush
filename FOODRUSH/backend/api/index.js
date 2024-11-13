@@ -13,11 +13,12 @@ dbconnect();
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => res.status(200).json({ message: "Hello World!" }));
+// app.get("/", (req, res) => res.status(200).json({ message: "Hello World!" }));
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000"],
+    // origin: ["http://localhost:3000"],
+    origin: ["https://food-rush-frontend.vercel.app"],
   })
 );
 
